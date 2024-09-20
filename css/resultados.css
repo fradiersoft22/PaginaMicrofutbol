@@ -1,0 +1,89 @@
+.titulo {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+.container-resultado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+    justify-items: center; /* Centrar tarjetas en las columnas */
+}
+.resultado-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    transition: transform 0.3s;
+    max-width: 300px; /* Ancho máximo para las tarjetas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+.resultado-card:hover {
+    transform: translateY(-5px);
+}
+.resultado-card h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+.resultado {
+    font-size: 18px;
+    color: #495057;
+    margin: 10px 0;
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.titulo {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+    position: relative; /* Para el pseudo-elemento */
+}
+
+.container-resultado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 15px; /* Espacio entre las tarjetas */
+    justify-items: center; /* Centrar tarjetas en las columnas */
+    position: relative; /* Para el pseudo-elemento */
+}
+
+.container-resultado::before {
+    content: "";
+    background-image: url(../fondos/fondodos.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: absolute; /* Posiciona el pseudo-elemento en relación a .container-resultado */
+    top: 0; /* Posiciona en la parte superior */
+    left: 0; /* Posiciona en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    z-index: 0; /* Envía la imagen al fondo */
+}
+
+.resultado-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    transition: transform 0.3s;
+    max-width: 300px; /* Ancho máximo para las tarjetas */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    position: relative; /* Para que el contenido esté por encima del fondo */
+    z-index: 1; /* Asegura que las tarjetas estén por encima de la imagen de fondo */
+    margin: 20px;
+}
+
+
+.resultado:hover {
+    background-color: #e2e6ea;
+}
+@media (max-width: 768px) {
+    .container-resultado {
+        grid-template-columns: 1fr; /* Una tarjeta por fila en pantallas pequeñas */
+    }
+}

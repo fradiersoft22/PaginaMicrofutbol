@@ -1,0 +1,83 @@
+.goleadores {
+    background-image: url(../fondos/fondouno.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.goleadores-color {
+    background-color: #f4f4f4;
+}
+
+.goleadores > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px; /* Reducido el padding */
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+.tabla-goleadores {
+    margin-top: 10px; /* Reducido el margen superior */
+    display: table;
+    width: 100%;
+}
+
+.encabezado, .goleador {
+    display: table-row;
+}
+
+.encabezado span, .goleador span {
+    display: table-cell;
+    padding: 5px; /* Reducido el padding */
+    text-align: center;
+    border-bottom: 1px solid #007BFF;
+}
+
+.goles {
+    font-weight: bold;
+    color: #007BFF;
+}
+.encabezado-goleadores{
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .tabla-goleadores {
+        display: block;
+    }
+
+    .encabezado, .goleador {
+        display: block;
+        margin-bottom: 5px; /* Reducido el margen entre filas */
+        border: 1px solid #007BFF;
+        border-radius: 8px;
+        padding: 8px; /* Reducido el padding */
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .encabezado span, .goleador span {
+        display: block;
+        text-align: center; /* Centrado del texto */
+        padding: 3px; /* Reducido el padding */
+    }
+
+    .goleador {
+        font-size: 14px;
+    }
+    .encabezado-goleadores{
+        color: #007BFF;
+        font-weight: bold;
+    }
+}
