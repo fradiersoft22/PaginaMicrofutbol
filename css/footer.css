@@ -16,17 +16,7 @@ footer a:hover {
     color: #16a085;
     text-decoration: underline;
 }
-.social-icons {
-    margin: 10px 0;
-}
-.social-icons img {
-    width: 30px;
-    margin: 0 5px;
-    transition: transform 0.3s;
-}
-.social-icons img:hover {
-    transform: scale(1.1);
-}
+
 .footer-content {
     max-width: 600px;
     margin: 0 auto;
